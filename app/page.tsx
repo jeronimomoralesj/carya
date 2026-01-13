@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Zap, Menu, X, Mail, MapPin, Clock, Users } from 'lucide-react'
+import { Menu, X, Mail, MapPin, Clock, Users } from 'lucide-react'
 import Image from 'next/image'
 import logo from "../public/logo.png"
 export default function Home() {
