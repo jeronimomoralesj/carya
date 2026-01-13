@@ -1,36 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+  
   body {
-    @apply bg-black text-white antialiased;
+    @apply antialiased;
+    background-color: #000;
+    color: #fff;
   }
-}
-
-@layer utilities {
-  .glow-text {
-    text-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
-  }
-  
-  .glow-border {
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
-  }
-  
-  .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600;
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
 }
