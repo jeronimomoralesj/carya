@@ -50,6 +50,7 @@ export default function Team() {
               <Image 
                 src={logo}
                 height={30}
+                alt='logo'
               />
             </Link>
 
@@ -161,6 +162,7 @@ export default function Team() {
               <Image 
                 src={logo}
                 height={30}
+                alt='logo'
               />
             </div>
             

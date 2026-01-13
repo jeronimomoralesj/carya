@@ -36,6 +36,7 @@ export default function Home() {
               <Image 
                 src={logo}
                 height={30}
+                alt='logo'
               />
             </div>
 
@@ -255,6 +256,7 @@ export default function Home() {
               <Image 
                 src={logo}
                 height={40}
+                alt='logo'
               />
             </div>
             
