@@ -3,18 +3,24 @@
 import { useState, useEffect, useRef } from 'react'
 import { Menu, X, Mail, MapPin, Zap, Download, Search, Apple, Smartphone } from 'lucide-react'
 
+declare global {
+  interface Window {
+    L: any;
+  }
+}
+
 export default function Home() {
   const [scrollY, setScrollY] = useState(0)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [navBackground, setNavBackground] = useState(false)
   const [currentHeroImage, setCurrentHeroImage] = useState(0)
   const [searchQuery, setSearchQuery] = useState('')
-  const mapRef = useRef(null)
+  const mapRef = useRef<HTMLDivElement>(null)
 
   const heroImages = [
     'https://images.pexels.com/photos/34800677/pexels-photo-34800677.jpeg',
     'https://images.pexels.com/photos/34800675/pexels-photo-34800675.jpeg',
-    'https://images.pexels.com/photos/8349487/pexels-photo-8349487.jpeg'
+    'https://images.pexels.com/photos/5391510/pexels-photo-5391510.jpeg'
   ]
 
   const chargingStations = [
@@ -29,6 +35,7 @@ export default function Home() {
     { id: 9, lat: 4.7167, lng: -74.0833, name: 'Estación Salitre' },
     { id: 10, lat: 4.6889, lng: -74.0556, name: 'Estación Unicentro' },
   ]
+
 
   // Preload images
   useEffect(() => {
@@ -54,16 +61,15 @@ export default function Home() {
     return () => clearInterval(interval)
   }, [])
 
-  // Initialize Google Map
-  // Initialize Leaflet Map
+// Initialize Leaflet Map
   useEffect(() => {
     const initMap = () => {
       if (!mapRef.current || !window.L) return
 
       // Clear any existing map
-      if (mapRef.current._leaflet_id) {
-        return
-      }
+      if ((mapRef.current as any)._leaflet_id) {
+  return
+}
 
       const map = window.L.map(mapRef.current).setView([4.6533, -74.0836], 12)
 
@@ -307,7 +313,7 @@ export default function Home() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `url('https://images.pexels.com/photos/5391510/pexels-photo-5391510.jpeg')`,
+            backgroundImage: `url('https://images.pexels.com/photos/8349487/pexels-photo-8349487.jpeg')`,
             transform: `translateY(${scrollY * 0.2}px)`,
           }}
         />
