@@ -155,12 +155,11 @@ export default function RootLayout({
                   },
                 },
                 {
-                  '@type': 'LocalBusiness',
+                  '@type': 'AutomotiveBusiness',
                   '@id': 'https://carya.com.co/#hacienda-santa-barbara',
                   name: 'Carya - Hacienda Santa Bárbara',
                   description: 'Estación de carga rápida con servicio Valet Charge en Hacienda Santa Bárbara',
                   image: 'https://carya.com.co/hacienda-santa-barbara.jpg',
-                  '@type': 'AutomotiveBusiness',
                   priceRange: '$$',
                   address: {
                     '@type': 'PostalAddress',
@@ -207,12 +206,11 @@ export default function RootLayout({
                   ],
                 },
                 {
-                  '@type': 'LocalBusiness',
+                  '@type': 'AutomotiveBusiness',
                   '@id': 'https://carya.com.co/#conecta-26',
                   name: 'Carya - Centro Empresarial Conecta 26',
                   description: 'Estación de carga rápida con servicio Valet Charge en Conecta 26',
                   image: 'https://carya.com.co/conecta-26.jpg',
-                  '@type': 'AutomotiveBusiness',
                   priceRange: '$$',
                   address: {
                     '@type': 'PostalAddress',
